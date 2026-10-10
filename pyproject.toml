@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "yolo-enemy-detection"
+version = "0.1.0"
+description = "YOLOv8 soldier detection for gameplay images and videos"
+requires-python = ">=3.10"
+dependencies = [
+    "ultralytics>=8.3,<9",
+    "opencv-python>=4.8,<5",
+    "PyYAML>=6,<7",
+]
+
+[project.urls]
+Repository = "https://github.com/Corden404/YOLO-Enemy-Detection"
+
+[project.scripts]
+enemy-detect = "yolo_enemy_detection.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+yolo_enemy_detection = ["weights/*.pt"]

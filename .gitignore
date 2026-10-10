@@ -1,0 +1,55 @@
+# Local data, outputs and recoverable originals
+.trash/
+legacy/
+data/
+datasets/
+videos/
+extracted_frames/
+runs/
+outputs/
+models/
+*.cache
+*.zip
+*.mp4
+*.avi
+*.mov
+*.mkv
+
+# Model artifacts: ship only the compact inference checkpoint
+*.pt
+!src/yolo_enemy_detection/weights/enemy_yolov8n.pt
+*.onnx
+*.engine
+
+# Documentation remains local
+docs/
+*.md
+*.rst
+*.doc
+*.docx
+*.pdf
+*.ppt
+*.pptx
+*.odt
+*.html
+*.tex
+*.txt
+!requirements.txt
+
+# Python, editors and machine-specific settings
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+build/
+dist/
+.pytest_cache/
+.ruff_cache/
+.coverage
+.idea/
+.vscode/
+.env
+.env.*
+.DS_Store
+Thumbs.db
