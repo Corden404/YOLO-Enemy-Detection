@@ -21,9 +21,10 @@ models/
 *.onnx
 *.engine
 
-# Documentation remains local
+# Keep documentation local except the public project README
 docs/
 *.md
+!/README.md
 *.rst
 *.doc
 *.docx
